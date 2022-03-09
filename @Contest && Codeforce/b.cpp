@@ -6,31 +6,33 @@ using namespace std;
 #define ld long double
 #define pb push_back
 #define mp make_pair
-#define ff first
-#define ss second
+#define ft front()
+#define bk back()
 #define pi 2*acos(0.0)     /// acos(-1) , 3.14159265359
+const int MOD = 1e9+7; // 998244353;
+const int MX = 2e5+5;
+const ll BIG = 1e18; // not too close to LLONG_MAX
 #define gap ' '
 #define en '\n'
-#define all(x) (x).begin(),(x).end()
 #define sz(x) (int(x.size()))
-#define SORT(x)  sort(x.begin(), x.end())
+#define sor(x)  sort(x.begin(), x.end())
 
-#define f0(b) for(int i=0;i<(b);i++)
-//#define f00(b) for(int j=0;j<(b);j++)
-//#define f1(b) for(int i=1;i<=(b);i++)
-//#define f11(b) for(int j=1;j<=(b);j++)
-//#define f2(a,b) for(int i=(a);i<=(b);i++)
-//#define f22(a,b) for(int j=(a);j<=(b);j++)
+#define FOR(i,a,b) for (int i = (a); i < (b); ++i)
+#define F0R(i,a) FOR(i,0,a)
+#define ROF(i,a,b) for (int i = (b)-1; i >= (a); --i)
+#define R0F(i,a) ROF(i,0,a)
+#define each(a,x) for (auto& a: x)
 
 void solve(){
-    int n;
-    cin >> n;
-    vector <int> v;
-    for(int i = 1; i < 2000; i++){
-        if(i%3 != 0 && i%10 != 3)v.push_back(i);
-    }
-    cout << v[n-1] << en;
-
+	ll l, r, a, ans = 0, x = 0;
+	cin >> l >> r >> a;
+	ans = r/a + r%a;
+	x = r - r%a - 1;
+	if(x < l) cout << ans << en;
+	else{
+		cout << max(ans, x/a + x%a) << en;
+	}
+	
 }
 int main(){
 	ios_base::sync_with_stdio(false);
@@ -39,8 +41,8 @@ int main(){
 	freopen("input.txt","r",stdin);
 	//freopen("output.txt","w",stdout);
 	#endif
-	int t=1;
-	cin>>t;
+	int t = 1;
+	cin >> t;
 	while(t--){
 		solve();}
 	return 0;

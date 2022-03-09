@@ -6,41 +6,36 @@ using namespace std;
 #define ld long double
 #define pb push_back
 #define mp make_pair
-#define ff first
-#define ss second
+#define ft front()
+#define bk back()
 #define pi 2*acos(0.0)     /// acos(-1) , 3.14159265359
+const int MOD = 1e9+7; // 998244353;
+const int MX = 2e5+5;
+const ll BIG = 1e18; // not too close to LLONG_MAX
 #define gap ' '
 #define en '\n'
-#define all(x) (x).begin(),(x).end()
 #define sz(x) (int(x.size()))
-#define SORT(x)  sort(x.begin(), x.end())
+#define sor(x)  sort(x.begin(), x.end())
 
-#define f0(b) for(int i=0;i<(b);i++)
-//#define f00(b) for(int j=0;j<(b);j++)
-//#define f1(b) for(int i=1;i<=(b);i++)
-//#define f11(b) for(int j=1;j<=(b);j++)
-//#define f2(a,b) for(int i=(a);i<=(b);i++)
-//#define f22(a,b) for(int j=(a);j<=(b);j++)
+#define FOR(i,a,b) for (int i = (a); i < (b); ++i)
+#define F0R(i,a) FOR(i,0,a)
+#define ROF(i,a,b) for (int i = (b)-1; i >= (a); --i)
+#define R0F(i,a) ROF(i,0,a)
+#define each(a,x) for (auto& a: x)
 
 void solve(){
-    string s;
+    string s, s1;
     cin >> s;
-    char c = 'z';
-    for(int i = 0; i < s.length(); i++){
-        c = min(c, s[i]);
-    }
-    int idx;
-    for(int i = 0; i < s.size(); i++){
-        if(s[i] == c){
-            idx = i;
-            break;
+    char ch;
+    cin >> ch;
+    for(int i = 0; i < s.size(); i+=2){
+        if(s[i] == ch){
+            cout << "YES" << en;
+            return;
         }
     }
-    cout << s[idx] << " ";
-    for(int i = 0; i < s.size(); i++){
-        if(i != idx) cout << s[i];
-    }
-    cout << endl;
+    cout << "NO" << en;
+    
 }
 int main(){
 	ios_base::sync_with_stdio(false);
@@ -49,8 +44,8 @@ int main(){
 	freopen("input.txt","r",stdin);
 	//freopen("output.txt","w",stdout);
 	#endif
-	int t=1;
-	cin>>t;
+	int t = 1;
+	cin >> t;
 	while(t--){
 		solve();}
 	return 0;

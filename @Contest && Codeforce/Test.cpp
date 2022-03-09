@@ -26,7 +26,8 @@ const ll BIG = 1e18; // not too close to LLONG_MAX
 void solve(){
 	int n;
 	cin >> n;
-	F0R(i, 10) cout << n << " ";
+	F0R(i, n)
+	cout << "HELLO WORLD!" << en;
 }
 int main(){
 	ios_base::sync_with_stdio(false);
@@ -36,7 +37,7 @@ int main(){
 	//freopen("output.txt","w",stdout);
 	#endif
 	int t = 1;
-	//cin >> t;
+	cin >> t;
 	while(t--){
 		solve();}
 	return 0;
